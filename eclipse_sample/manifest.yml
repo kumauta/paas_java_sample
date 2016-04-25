@@ -1,0 +1,9 @@
+---
+applications:
+- name: ps
+  memory: 512M
+  instances: 1
+  host: ps
+  domain: jp1.eclpaas.com
+  env:
+    JAVA_OPTS: -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=45283,suspend=n

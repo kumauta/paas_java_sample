@@ -1,0 +1,5 @@
+random-route: true
+env:
+  JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+services:
+- mysql_sample

@@ -1,0 +1,6 @@
+security:
+  basic:
+    path: /secret/**
+  user:
+    name: admin
+    password: admin123

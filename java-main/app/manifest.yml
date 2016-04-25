@@ -1,0 +1,8 @@
+---
+name: javamain
+memory: 256M
+no-route: true
+health-check-type: none
+buildpack: https://github.com/cloudfoundry/java-buildpack.git
+command: $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/*:. -Djava.io.tmpdir=$TMPDIR test.Sample
+path: ./

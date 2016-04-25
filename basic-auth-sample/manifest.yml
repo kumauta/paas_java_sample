@@ -1,0 +1,10 @@
+---
+applications:
+- name: basicauth
+  memory: 512M
+  instances: 1
+  random-route: true
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  env:
+    JBP_CONFIG_TOMCAT: '{ tomcat: { external_configuration_enabled: true }, external_configuration: { repository_root: "https://str.cloudn-service.com/buildpacks/java/basic_auth/" } }'
+    JAVA_OPTS: "-Djava.security.egd=file:///dev/urandom -Dadmin.role=admin-role -Dadmin.name=admin -Dadmin.password=admin123"
