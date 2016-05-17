@@ -1,0 +1,10 @@
+---
+applications:
+- name: multi-basicauth
+  memory: 512M
+  instances: 1
+  random-route: true
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  env:
+    JBP_CONFIG_TOMCAT: '{ tomcat: { external_configuration_enabled: true }, external_configuration: { repository_root: "https://raw.githubusercontent.com/nttcom-paas/override-tomcat-settings/master/" } }'
+    JAVA_OPTS: "-Djava.security.egd=file:///dev/urandom"
