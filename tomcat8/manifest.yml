@@ -1,0 +1,8 @@
+applications:
+- name: tomcat8
+  memory: 512M
+  instances: 1
+  random-route: true
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+    JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
