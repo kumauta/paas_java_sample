@@ -1,0 +1,8 @@
+---
+applications:
+- name: remote-address
+  memory: 512M
+  instances: 1
+  random-route: true
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
